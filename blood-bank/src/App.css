@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./images/Banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.table-container {
+  width: 90%;
+  border-radius: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.donor-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  transform-style: preserve-3d;
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+}
+
+.donor-table th,
+.donor-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: transparent; /* Transparent background for table cells */
+}
+
+.donor-row:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.donor-table th {
+  background-color: #ff0000; /* Red background for table header */
+  color: #fff; /* White text color for table header */
+}
+
+.donor-table td {
+  color: #333; /* Black text color for table cells */
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .donor-table {
+    overflow-x: auto;
+    display: block;
+  }
+
+  .donor-table th,
+  .donor-table td {
+    white-space: nowrap; /* Prevent text wrapping */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 480px) {
+  .donor-table th,
+  .donor-table td {
+    padding: 5px;
   }
 }
