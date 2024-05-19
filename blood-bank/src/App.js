@@ -1,9 +1,16 @@
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+
 import './App.css';
 import DonorInfoTable from './components/donor-info';
-import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
-    <DonorInfoTable/>
+    <BrowserRouter>
+       <Routes>
+          <Route exact path="/" element={<DonorInfoTable/>} />
+          <Route path="/about" element={<DonorInfoTable/>} />
+          <Route path="/donor-list" element={<DonorInfoTable/>} />
+        </Routes>
+    </BrowserRouter>
   );
 }
 

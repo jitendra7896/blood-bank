@@ -1,63 +1,56 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-image: url('./images/Banner.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+	font-family: 'Red Hat Display', sans-serif;
+	font-weight: 400;
+	perspective: 2000px;
+	height: 100vh;
+	background-image: url('./images/pixelcut-export.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.table-container {
-  width: 90%;
-  border-radius: 20px;
-}
 
-.donor-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  transform-style: preserve-3d;
-  background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
-}
+table {
+	border-spacing: 0px;
+	box-shadow: 5px 4px 30px rgba(0, 0, 0, .10);
+	border-radius: 10px;
+	background: #fff;
+	width: 100%;
 
-.donor-table th,
-.donor-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  background-color: transparent; /* Transparent background for table cells */
-}
 
-.donor-row:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-}
+	td {
+		padding: 20px 15px;
+	}
 
-.donor-table th {
-  background-color: #ff0000; /* Red background for table header */
-  color: #fff; /* White text color for table header */
-}
+	thead {
+		background: #EF0107;
+		border-radius: 10px 10px 0 0;
 
-.donor-table td {
-  color: #333; /* Black text color for table cells */
-}
+		tr {
+			border-radius: 10px 10px 0 0;
+		}
 
-/* Media Queries for Responsive Design */
+		td {
+			color: #fff;
+			font-size: 20px;
+		}
 
-@media screen and (max-width: 768px) {
-  .donor-table {
-    overflow-x: auto;
-    display: block;
-  }
+		td:first-of-type {
+			border-radius: 10px 0 0 0;
+		}
 
-  .donor-table th,
-  .donor-table td {
-    white-space: nowrap; /* Prevent text wrapping */
-  }
-}
+		td:last-of-type {
+			border-radius: 0 10px 0 0;
+		}
+	}
 
-@media screen and (max-width: 480px) {
-  .donor-table th,
-  .donor-table td {
-    padding: 5px;
-  }
+	tbody {
+		td {
+			border-top: 1px solid #f0f0f0;
+		}
+
+		tr:hover {
+			background: rgba(123, 153, 218, .1);
+		}
+	}
+
 }
